@@ -31,11 +31,11 @@ didn't work for me:
 
 
 ## 2. Install Required Libraries
-1. nbtlib
+- nbtlib
    ```
    pip install nbtlib
    ```
-2. openpyxl
+- openpyxl
    ```
    pip install openpyxl
    ```
