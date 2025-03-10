@@ -1,4 +1,4 @@
-# NBT Data Parser + Extractor.py
+# NBT Data Parser + Extractor (nbtdatparse.py)
 ![image](https://github.com/user-attachments/assets/d78feab2-db47-4c15-9def-96c5117d0a8f)
 This is specifically for scanning many minecraft .dat files at once and listing them to be located, or for relevant data to be located. My use case is finding the seed to my minecraft world I deleted 13 years ago.
 
