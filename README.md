@@ -40,8 +40,10 @@ didn't work for me:
    pip install openpyxl
    ```
 
-## 3. Set scan and save locations in the .py file (optional)
-By default it scans all .dat files in the current folder and subdirectories, then it saves `minecraft_worlds.xlsx` in the same folder.
+## 3. Set scan and save locations in the .py file - not optional
+- currently `D:\dump` is for the scanning
+- currently `D:/dump` is for the `minecraft_worlds.xlsx` location
+~~By default it scans all .dat files in the current folder and subdirectories, then it saves `minecraft_worlds.xlsx` in the same folder.~~
 
 ## 4. Should be good to go!
 I used Perplexity to create this script and it may help someone. I'll put my short quide for [DMDE](optionalDMDE/info.md) to scan whole drives for data files and my scan signatures.
