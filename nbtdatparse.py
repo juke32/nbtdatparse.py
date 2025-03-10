@@ -1,20 +1,18 @@
 import nbtlib
 import os
+import gzip
 from openpyxl import Workbook
 
-# Set the directory path, I have examples, only have one uncommented
-
-directory_path = 'C:/Users/thoma/AppData/Roaming/.minecraft/saves' #specific directory
-#directory_path = 'D:/dump'          #specific directory
-#directory_path = os.getcwd()       # broken may use root directory not current
-
-
+# Set the directory path
+directory_path = 'C:/Users/juke32/AppData/Roaming/.minecraft'
+#directory_path = 'D:/dump'
 
 # Create a new Excel workbook
 wb = Workbook()
 ws_data = wb.active
 ws_data.title = "Data"
 ws_errors = wb.create_sheet(title="Errors")
+ws_log = wb.create_sheet(title="Log Results")
 
 # Set header row for Data tab
 ws_data['A1'] = 'File Name'
@@ -31,6 +29,11 @@ ws_errors['A1'] = 'File Name'
 ws_errors['B1'] = 'Error Message'
 ws_errors['C1'] = 'Path'
 
+# Set header row for Log Results tab
+ws_log['A1'] = 'File Name'
+ws_log['B1'] = 'Path'
+ws_log['C1'] = 'Log Line'
+
 # Adjust column widths
 ws_data.column_dimensions['A'].width = 20
 ws_data.column_dimensions['B'].width = 20
@@ -45,9 +48,14 @@ ws_errors.column_dimensions['A'].width = 20
 ws_errors.column_dimensions['B'].width = 50
 ws_errors.column_dimensions['C'].width = 50
 
+ws_log.column_dimensions['A'].width = 20
+ws_log.column_dimensions['B'].width = 50
+ws_log.column_dimensions['C'].width = 100
+
 # Initialize row counters
 row_data = 2
 row_errors = 2
+row_log = 2
 
 # Initialize counters for processed and saved files
 processed_files = 0
@@ -139,12 +147,25 @@ for root, dirs, files in os.walk(directory_path):
                 errors_encountered += 1
                 row_errors += 1
 
-# Save the workbook to location, I think os.getcwd() would do the directory where the .py is saved
+# Iterate through all .gz files in the directory and its subdirectories
+for root, dirs, files in os.walk(directory_path):
+    for filename in files:
+        if filename.endswith(".gz"):
+            file_path = os.path.join(root, filename)
+            
+            try:
+                with gzip.open(file_path, 'rt') as f:
+                    for line in f:
+                        if 'seed' in line.lower() and 'level.dat' not in file_path:
+                            ws_log[f'A{row_log}'] = filename
+                            ws_log[f'B{row_log}'] = os.path.dirname(file_path)
+                            ws_log[f'C{row_log}'] = line.strip()
+                            row_log += 1
+            except Exception as e:
+                print(f"Error reading {filename}: {e}")
 
-output_dir = "C:/Users/thoma/AppData/Roaming/.minecraft/saves" #specific directory
-#output_dir = "D:/dump"          #specific directory
-#output_dir = os.getcwd()       # broken may use root directory not current
-
+# Save the workbook to location
+output_dir = directory_path  
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 wb.save(os.path.join(output_dir, "minecraft_worlds.xlsx"))
