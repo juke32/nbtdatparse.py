@@ -40,10 +40,6 @@ didn't work for me:
    ```
    pip install openpyxl
    ```
-- gzip?
-  ```
-   pip install gzip
-  ```
 
 ## 3. Set scan and save location in the .py file - not optional
 - ~~By default it scans all .dat files in the current folder and subdirectories, then it saves `minecraft_worlds.xlsx` in the same folder.~~
@@ -58,6 +54,7 @@ I used Perplexity to create this script and it may help someone. I'll put my sho
 - Click sort and filter
 - Select filter
 2. The top row should now have dropdown arrows, select and sort however you need
+3. When you find seeds you know arn't what you are looking for add them to the ignored seeds section in the code
 
 ----
 ## here is what mine looked like at the end
