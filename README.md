@@ -50,7 +50,7 @@ I used Perplexity to create this script and it may help someone. I'll put my sho
 1. Highlight the top row of the Data tab
 - Click sort and filter
 - Select filter
-2. At the top of the page select the dropdown arrows and select and sort however you need
+2. The top row should now have dropdown arrows, select and sort however you need
 
 ----
 ## here is what mine looked like at the end
