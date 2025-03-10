@@ -17,7 +17,7 @@ This is specifically for scanning many minecraft .dat files at once and listing 
 - (possible to get ai to augment code to also include data from the inventory or [other information that is typically stored in the level.dat files](https://minecraft.wiki/w/Java_Edition_level_format))
 
 ## 0. Download my .py file
-can be seperate from your .dat files
+place file in directory to scan
 
 
 ## 1. Install Python / use a working interpreter version
@@ -40,8 +40,8 @@ didn't work for me:
    pip install openpyxl
    ```
 
-## 3. Set scan and save locations in the .py file
-By default it scans all of the subdirectories of `D:\dump`(top of file) and then saves the results to `minecraft_worlds.xlsx`in to `D:\dump`(bottom of file)
+## 3. Set scan and save locations in the .py file (optional)
+By default it scans all .dat files in the current folder and subdirectories, then it saves `minecraft_worlds.xlsx` in the same folder.
 
 ## 4. Should be good to go!
 I used Perplexity to create this script and it may help someone. I'll put my short quide for [DMDE](optionalDMDE/info.md) to scan whole drives for data files and my scan signatures.
