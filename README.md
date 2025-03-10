@@ -14,6 +14,7 @@ This is specifically for scanning many minecraft .dat files at once and listing 
 - game mode
 - spawn location
 - file path
+- searches logs for instances of 'seed'
 - (possible to get ai to augment code to also include data from the inventory or [other information that is typically stored in the level.dat files](https://minecraft.wiki/w/Java_Edition_level_format))
 
 ## 0. Download my .py file
@@ -39,11 +40,14 @@ didn't work for me:
    ```
    pip install openpyxl
    ```
+- gzip?
+  ```
+   pip install gzip
+  ```
 
-## 3. Set scan and save locations in the .py file - not optional
+## 3. Set scan and save location in the .py file - not optional
 - ~~By default it scans all .dat files in the current folder and subdirectories, then it saves `minecraft_worlds.xlsx` in the same folder.~~
-- change `D:\dump` or `C:\Users\juke32\AppData\Roaming\.minecraft\saves` (top of file), used for the scanning
-- change `D:/dump` or `C:/Users/juke32/AppData/Roaming/.minecraft/saves` (bottom of file), used for the `minecraft_worlds.xlsx` location
+- change `D:/dump` or `C:/Users/juke32/AppData/Roaming/.minecraft/saves` used for scanning and the `minecraft_worlds.xlsx` location 
 
 
 ## 4. Should be good to go!
