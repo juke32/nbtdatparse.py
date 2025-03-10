@@ -4,8 +4,8 @@ from openpyxl import Workbook
 
 # Set the directory path, I have examples, only have one uncommented
 
-#directory_path = 'C:/Users/juke32/AppData/Roaming/.minecraft/saves' #specific directory
-directory_path = 'D:/dump'          #specific directory
+directory_path = 'C:/Users/thoma/AppData/Roaming/.minecraft/saves' #specific directory
+#directory_path = 'D:/dump'          #specific directory
 #directory_path = os.getcwd()       # broken may use root directory not current
 
 
@@ -141,8 +141,8 @@ for root, dirs, files in os.walk(directory_path):
 
 # Save the workbook to location, I think os.getcwd() would do the directory where the .py is saved
 
-#output_dir = "C:/Users/juke32/AppData/Roaming/.minecraft/saves" #specific directory
-output_dir = "D:/dump"          #specific directory
+output_dir = "C:/Users/thoma/AppData/Roaming/.minecraft/saves" #specific directory
+#output_dir = "D:/dump"          #specific directory
 #output_dir = os.getcwd()       # broken may use root directory not current
 
 if not os.path.exists(output_dir):
