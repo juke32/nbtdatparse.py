@@ -5,7 +5,7 @@ from openpyxl import Workbook
 # Set the directory path
 # Save the workbook to location, I think os.getcwd() would do the directory where the .py is saved
 
-#directory_path = 'D:\dump'
+#directory_path = 'D:\dump' #specific directory
 directory_path = os.getcwd() #current directory
 
 
@@ -141,7 +141,7 @@ for root, dirs, files in os.walk(directory_path):
 
 # Save the workbook to location, I think os.getcwd() would do the directory where the .py is saved
 
-#output_dir = "D:/dump"
+#output_dir = "D:/dump" #specific directory
 output_dir = os.getcwd() #current directory
 
 if not os.path.exists(output_dir):
