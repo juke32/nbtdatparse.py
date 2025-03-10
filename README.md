@@ -1,6 +1,6 @@
 # Python NBT Data Parser + Extractor (nbtdatparse.py)
 ![image](https://github.com/user-attachments/assets/d78feab2-db47-4c15-9def-96c5117d0a8f)
-This is specifically for scanning many minecraft .dat files at once and listing them to be located, or for relevant data to be located. My use case is finding the seed to my minecraft world I deleted 13 years ago.
+This is specifically for scanning many minecraft .dat files at once and listing them on an excel sheet to more easily find old or deleted minecraft seeds. My use case is finding the seed to my minecraft world I deleted 13 years ago. (.dat and log.gz file have the same identifier so I may add an option to search recovered log files for /seed or for specific usernames or info)
 
 - brief instructions for [DMDE .dat searching](optionalDMDE/info.md)
 (free software that can recover up to 4000 files, one directory at a time)
