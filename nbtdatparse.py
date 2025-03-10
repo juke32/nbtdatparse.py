@@ -3,7 +3,11 @@ import os
 from openpyxl import Workbook
 
 # Set the directory path
+# Save the workbook to location, I think os.getcwd() would do the directory where the .py is saved
+
 directory_path = 'D:\dump'
+#output_dir = os.getcwd()
+
 
 # Create a new Excel workbook
 wb = Workbook()
@@ -134,8 +138,11 @@ for root, dirs, files in os.walk(directory_path):
                 errors_encountered += 1
                 row_errors += 1
 
-# Save the workbook
+# Save the workbook to location, I think os.getcwd() would do the directory where the .py is saved
+
 output_dir = "D:/dump"
+#output_dir = os.getcwd()
+
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 wb.save(os.path.join(output_dir, "minecraft_worlds.xlsx"))
