@@ -8,7 +8,8 @@ This script scans minecraft data and log files for minecraft seeds. My use case 
 
 - Short guide for [DMDE](optionalDMDE/info.md) minecraft .dat or .log.gz file recovery using my scan signatures.
 (free software that can recover up to 4000 files, one directory at a time)
-
+- [what is a level.dat file](https://minecraft.wiki/w/Java_Edition_level_format))
+----
 ***nbtdatparse.py retrieves:***
 - file name
 - seed
@@ -18,10 +19,10 @@ This script scans minecraft data and log files for minecraft seeds. My use case 
 - game mode
 - spawn location
 - file path
+- version
+- last played
 - searches logs for instances of 'seed'
-- (possible to get ai to augment code to also include data from the inventory or [other information that is typically stored in the level.dat files](https://minecraft.wiki/w/Java_Edition_level_format))
-
-
+----
 ## 0. Download my .py file
 place file in good location
 
@@ -43,14 +44,13 @@ install the libraries to the interpreter / version of python that runs the code
    ```
 
 ## 3. Set `directory_path` for scanning and output of `minecraft_worlds_recovery.xlsx` - not optional
-- ~~By default it scans all .dat files in the current folder and subdirectories, then it saves `minecraft_worlds.xlsx` in the same folder.~~
 - current examples: `D:/dump` & `C:/Users/juke32/AppData/Roaming/.minecraft/saves`  
 
 
 ## 4. Should be good to run!
 If it doesn't work double check the file path, direction of the slashes, if the correct python interpreter is used, try using a terminal window not an ide or coding enviroment.
 
-## 5. Sorting through the .xlsx
+## 5. Sorting through the .xlsx in excel
 1. Highlight the top title row of the data in any tab
 - Click sort and filter
 - Select filter
