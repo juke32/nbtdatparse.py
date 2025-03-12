@@ -1,8 +1,8 @@
 # Python NBT Data and Log Parser + Extractor (nbtdatparse.py)
-scanning working .minecraft with `nbtdatparse-v3.py`
+scanning non-corrupt .minecraft with `nbtdatparse-v3.py`
 ![image](https://github.com/user-attachments/assets/d951cda1-60af-4698-9817-965ed28cce9d)
 ----
-scanning 20,000+ .dat files with older nbtdatparse version (will update this soon)
+scanning 20,000+ recovered .dat files with older nbtdatparse version (will update this photo soon)
 ![image](https://github.com/user-attachments/assets/99248ac3-c377-4b00-b10a-469248564737)
 This script scans minecraft data and log files for minecraft seeds. My use case is finding the seed to my minecraft world I deleted 13 years ago. I also wiped the drive atleast once :)
 
