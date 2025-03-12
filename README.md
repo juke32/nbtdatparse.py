@@ -53,3 +53,4 @@ If it doesn't work double check the file path, direction of the slashes, if the 
 2. The top row should now have dropdown arrows, select and sort however you need
 3. If you uncheck errors/seeds/info you already know about, you can reduce the clutter I didn't code out
 
+https://mcseedmap.net is very helpful
