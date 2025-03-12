@@ -6,9 +6,9 @@ scanning 20,000+ recovered .dat files with older nbtdatparse version (will updat
 ![image](https://github.com/user-attachments/assets/99248ac3-c377-4b00-b10a-469248564737)
 This script scans minecraft data and log files for minecraft seeds. My use case is finding the seed to my minecraft world I deleted 13 years ago. I also wiped the drive atleast once :)
 
-- Short guide for [DMDE](optionalDMDE/info.md) minecraft .dat or .log.gz file recovery using my scan signatures.
-(free software that can recover up to 4000 files, one directory at a time)
-- [what is a level.dat file](https://minecraft.wiki/w/Java_Edition_level_format))
+- Short guide for [DMDE](optionalDMDE/info.md) minecraft .dat / .log.gz file recovery using scan signatures.
+(DMDE is free software that can recover up to 4000 files, one directory at a time)
+- [what is a level.dat file](https://minecraft.wiki/w/Java_Edition_level_format#level.dat_format)
 ----
 ***nbtdatparse.py retrieves:***
 - file name
@@ -22,7 +22,7 @@ This script scans minecraft data and log files for minecraft seeds. My use case 
 - version
 - last played
 - searches logs for instances of 'seed'
-----
+
 ## 0. Download my .py file
 place file in good location
 
