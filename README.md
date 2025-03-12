@@ -1,4 +1,7 @@
 # Python NBT Data and Log Parser + Extractor (nbtdatparse.py)
+scanning working .minecraft with `nbtdatparse-v3.py`
+![image](https://github.com/user-attachments/assets/d951cda1-60af-4698-9817-965ed28cce9d)
+scanning 20,000+ .dat files with older nbtdatparse version (will update this soon)
 ![image](https://github.com/user-attachments/assets/99248ac3-c377-4b00-b10a-469248564737)
 This is specifically for scanning many minecraft .dat files at once and listing them on an excel sheet to more easily find old or deleted minecraft seeds. My use case is finding the seed to my minecraft world I deleted 13 years ago.
 
