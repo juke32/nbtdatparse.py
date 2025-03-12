@@ -11,7 +11,7 @@ import os
 
 # === Configuration Settings ===
 # Set the directory path - Configure this to point to your Minecraft directory
-directory_path = os.path.normpath('C:/Users/thoma/AppData/Roaming/.minecraft')
+directory_path = os.path.normpath('C:/Users/juke32/AppData/Roaming/.minecraft')
 #directory_path = os.path.normpath('D:/dump/randomdrive')
 #directory_path = os.path.normpath('D:/dump')
 
@@ -233,12 +233,12 @@ def setup_excel_headers():
     ws_corrupted['D1'] = 'Error Details'
 
     # Random Strings tab headers (last, renamed from Potential Seeds)
-    ws_potential['A1'] = 'Number'
-    ws_potential['B1'] = 'Found In'
-    ws_potential['C1'] = 'Context'
-    ws_potential['D1'] = 'Line'
-    ws_potential['E1'] = 'Path'
-    ws_potential['F1'] = 'Confidence'
+    ws_potential['A1'] = 'Confidence'
+    ws_potential['B1'] = 'Number'
+    ws_potential['C1'] = 'Found In'
+    ws_potential['D1'] = 'Context'
+    ws_potential['E1'] = 'Line'
+    ws_potential['F1'] = 'Path'
 
 def adjust_column_widths():
     """Adjust column widths for all Excel sheets"""
@@ -297,12 +297,12 @@ def adjust_column_widths():
     ws_corrupted.column_dimensions['D'].width = 30
 
     # Random Strings tab column widths
-    ws_potential.column_dimensions['A'].width = 25  # Number
-    ws_potential.column_dimensions['B'].width = 30  # Found In
-    ws_potential.column_dimensions['C'].width = 40  # Context
-    ws_potential.column_dimensions['D'].width = 100  # Line
-    ws_potential.column_dimensions['E'].width = 50  # Path
-    ws_potential.column_dimensions['F'].width = 15  # Confidence
+    ws_potential.column_dimensions['A'].width = 15  # Confidence
+    ws_potential.column_dimensions['B'].width = 25  # Number
+    ws_potential.column_dimensions['C'].width = 30  # Found In
+    ws_potential.column_dimensions['D'].width = 40  # Context
+    ws_potential.column_dimensions['E'].width = 100  # Line
+    ws_potential.column_dimensions['F'].width = 50  # Path
 
 def print_debug_info():
     """Print system and environment information for debugging"""
@@ -1252,12 +1252,12 @@ def write_potential_seeds():
     row = 2
     for number, info in potential_seeds.items():
         try:
-            ws_potential[f'A{row}'] = sanitize_text(number)
-            ws_potential[f'B{row}'] = sanitize_text(info['filename'])
-            ws_potential[f'C{row}'] = sanitize_text(info['context'])
-            ws_potential[f'D{row}'] = sanitize_text(info['line'])
-            ws_potential[f'E{row}'] = sanitize_text(info['path'])
-            ws_potential[f'F{row}'] = sanitize_text(info['confidence'])
+            ws_potential[f'A{row}'] = sanitize_text(info['confidence'])
+            ws_potential[f'B{row}'] = sanitize_text(number)
+            ws_potential[f'C{row}'] = sanitize_text(info['filename'])
+            ws_potential[f'D{row}'] = sanitize_text(info['context'])
+            ws_potential[f'E{row}'] = sanitize_text(info['line'])
+            ws_potential[f'F{row}'] = sanitize_text(info['path'])
             row += 1
         except Exception as e:
             print(f"\nWarning: Could not write row {row} due to invalid characters. Skipping...")
@@ -1624,6 +1624,7 @@ def main():
 if __name__ == '__main__':
     try:
         main()
+        print("I hope you find this helpful!")
         input("\nPress Enter to exit...")
     except KeyboardInterrupt:
         print("\nOperation cancelled by user")
